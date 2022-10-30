@@ -5,6 +5,7 @@ html(lang="en")
     link(rel="stylesheet", href="style.css")
     link(rel="icon", type="image/png", href="favicon.png")
     script(src="portraits.js" defer)
+    script(src="save.js" defer)
   body
       main
         header
@@ -20,6 +21,13 @@ html(lang="en")
                 li Select portrait from crew sketch
                 li Interactive fate selector
                 li Savestate support
+
+        section.menu
+            a(href="img/sketch.png" target="_blank") <button>Crew Sketch</button>
+            button(type="button" onclick="save()") Save
+            button(type="button" onclick="load()") Load
+            button(type="button" onclick="reset()") Reset
+
         table.crew-list
             tr
                 th #
@@ -45,6 +53,7 @@ html(lang="en")
                     td= member.origin
                     // TODO: Replace with a selector / modal
                     td <textarea name="cause-of-death"></textarea>
+
         footer
             p Made with ❤️ by <a href="https://github.com/sondregronas" target="_blank">@sondregronas</a>
             p.note

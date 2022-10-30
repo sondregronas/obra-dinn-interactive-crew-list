@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&display=swap');
+
+:root{
+    --mc: #333318;
+    --sc: #e4ffff;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -6,23 +12,23 @@
     font-size: 1.2rem;
     text-align: center;
     vertical-align: middle;
-
+    color: var(--mc);
+    border-color: var(--mc);
 }
 
 body{
-    background-color: #333318;
-    color: #333318;
+    background-color: var(--mc);
     padding-inline: 50px;
 }
 
 main {
-    background-color: #e4ffff;
+    background-color: var(--sc);
     margin: 50px auto 0 auto;
 }
 
 .crew-list {
     border-collapse: collapse;
-    margin: 50px auto;
+    margin: 0 auto 50px auto;
 }
 
 .crew-list td, .crew-list th{
@@ -30,14 +36,14 @@ main {
 }
 
 .crew-list td{
-    border: 1px solid #333318;
+    border: 1px solid;
     border-bottom: dotted;
 }
 
 .crew-list td img{
     width: 80px;
     height: auto;
-    border: solid #333318;
+    border: solid;
     margin-bottom: -25px;
 }
 
@@ -45,15 +51,13 @@ main {
     font-size: 12px;
     font-weight: bold;
     width: 24px;
-    background-color: #333318;
-    color: #e4ffff;
     margin-top: 28px;
     margin-bottom: -10px;
 }
 
 .crew-list th {
-    background-color: #333318;
-    color: #e4ffff;
+    background-color: var(--mc);
+    color: var(--sc);
 }
 
 .crew-list tr td:first-child,
@@ -80,13 +84,12 @@ main {
     width: 100%;
     height: 100%;
     resize: none;
-    background-color: #e4ffff;
+    background-color: var(--sc);
     border-bottom: dotted;
 }
 
 header{
-    padding: 50px;
-    padding-bottom: 0;
+    padding: 50px 50px 0;
 }
 
 header h1{
@@ -99,15 +102,13 @@ header li{
 }
 
 footer{
-    background-color: #333318;
-    color: #e4ffff;
+    background-color: var(--mc);
     padding: 20px;
     margin-bottom: 10px;
     font-style: italic;
 }
-
-footer a{
-    color: #e4ffff;
+footer *{
+    color: var(--sc);
 }
 
 footer .note{
@@ -118,4 +119,23 @@ footer .note{
 
 footer .note a{
     font-size: 1em;
+}
+
+.menu{
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Center buttons in rows */
+.menu button{
+    text-decoration: none;
+    margin: 2px 5px;
+    width: 12ch;
+    padding-top: 2px;
+}
+
+button, input {
+    cursor: pointer;
+    color: var(--sc);
+    background-color: var(--mc);
 }
