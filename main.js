@@ -22,7 +22,7 @@ app.set('view engine', 'pug');
 app.use(express.static('docs'));
 
 app.get('/', (req, res) => {
-    res.render('crew', {crew: crewDict});
+    res.render('index', {crew: crewDict});
 });
 
 app.listen(port, () => {
