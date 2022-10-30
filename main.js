@@ -19,7 +19,7 @@ const express = require('express');
 const app = express();
 
 app.set('view engine', 'pug');
-app.use(express.static('public'));
+app.use(express.static('docs'));
 
 app.get('/', (req, res) => {
     res.render('crew', {crew: crewDict});
