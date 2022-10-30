@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'IM Fell DW Pica', serif;
+    font-size: 1.2rem;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+body{
+    background-color: #333318;
+    color: #333318;
+    padding-inline: 50px;
+}
+
+main {
+    background-color: #e4ffff;
+    margin: 50px auto 0 auto;
+}
+
+.crew-list {
+    border-collapse: collapse;
+    margin: 50px auto;
+}
+
+.crew-list td, .crew-list th{
+    padding: 15px;
+}
+
+.crew-list td{
+    border: 1px solid #333318;
+    border-bottom: dotted;
+}
+
+.crew-list td img{
+    width: 64px;
+    height: auto;
+}
+
+.crew-list th {
+    background-color: #333318;
+    color: #e4ffff;
+}
+
+.crew-list tr td:first-child,
+.crew-list tr td:last-child{
+    border-left: none;
+    border-right: none;
+}
+
+.crew-list tr:last-child td{
+    border-bottom: none;
+}
+
+.crew-list .solved {
+    width: 20px;
+    height: 20px;
+    margin-right: .5ch;
+}
+
+.crew-list tr:has(.solved:checked){
+    text-decoration: line-through;
+}
+
+.crew-list textarea{
+    width: 100%;
+    height: 100%;
+    resize: none;
+    background-color: #e4ffff;
+    border-bottom: dotted;
+}
+
+header{
+    padding: 50px;
+    padding-bottom: 0;
+}
+
+header h1{
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+header li{
+    font-size: .9rem;
+}
+
+footer{
+    background-color: #333318;
+    color: #e4ffff;
+    padding: 20px;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+footer a{
+    color: #e4ffff;
+}
+
+footer .note{
+    margin-top: 5px;
+    font-style: normal;
+    font-size: .6em;
+}
+
+footer .note a{
+    font-size: 1em;
+}
