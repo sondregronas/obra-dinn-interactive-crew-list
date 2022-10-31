@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&display=swap');
+
+:root{
+    --mc: #333318;
+    --sc: #e4ffff;
+    --ff: 'IM Fell DW Pica', serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--ff);
+    font-size: 1.2rem;
+    text-align: center;
+    vertical-align: middle;
+    color: var(--mc);
+    border-color: var(--mc);
+}
+
+body{
+    background-color: var(--mc);
+    padding-inline: 50px;
+}
+
+main {
+    background-color: var(--sc);
+    margin: 50px auto 0 auto;
+}
+
+a{
+    text-decoration-style: dotted;
+    cursor: pointer;
+}
+
+button, input {
+    cursor: pointer;
+    color: var(--sc);
+    background-color: var(--mc);
+}

@@ -1,0 +1,83 @@
+html:has(.modal[style='display: block;']){
+    overflow: hidden;
+    padding-right: 16px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+    background-color: var(--sc);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid var(--mc);
+    width: 80%;
+}
+
+.modal-content button{
+    margin-top: 5px;
+    margin-inline: 10px;
+    min-width: 10ch;
+}
+
+.crew-modal-content{
+    margin: 5% auto;
+}
+
+#hoveredPortrait{
+    width: 10%;
+    height: auto;
+    position: fixed;
+    pointer-events: none;
+    border: solid var(--mc);
+    display: none;
+}
+
+.close {
+    color: var(--mc);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: var(--mc);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#save-text,
+#load-text{
+    display: block;
+    margin-inline: auto;
+    text-align: left;
+    font-family: monospace;
+    font-size: .8rem;
+    height: 20ch;
+    min-width: 50%;
+    resize: none;
+    color: var(--sc);
+    background-color: var(--mc);
+}
+
+::file-selector-button{
+    background-color: var(--sc);
+    color: var(--mc);
+    border: solid var(--mc);
+    font-family: var(--ff);
+}
+
+input[type="file"]{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-inline: auto;
+}

@@ -5,7 +5,7 @@ const loadModal = document.getElementById("load-modal");
 
 
 // Open modal
-document.getElementById("crewBtn").onclick = function() {crewModal.style.display = "block";}
+document.getElementById("crewBtn").onclick = function() {selectedPortrait = null; crewModal.style.display = "block";}
 document.getElementById("saveBtn").onclick = function() {generateSaveState(); saveModal.style.display = "block";}
 document.getElementById("loadBtn").onclick = function() {loadModal.style.display = "block";}
 

@@ -1,3 +1,5 @@
+let selectedPortrait = null;
+
 function decimg(id) {
     let img = document.getElementById(id.toString())
     let src = parseInt(img.src.toString().split('/').pop().split('.')[0])
@@ -40,5 +42,14 @@ function hoverPortrait(id) {
     }
 }
 function clickPortrait(id) {
-    console.log("Not implemented yet")
+    if (selectedPortrait) {
+        selectedPortrait.src = 'img/portraits/' + id.toString() + '.webp';
+        selectedPortrait = null;
+    }
+    crewModal.style.display = "none";
+}
+
+function updatePortrait(element) {
+    selectedPortrait = element;
+    crewModal.style.display = "block";
 }

@@ -10,10 +10,7 @@ table.crew-list
         tr
             td= member.id
             td.portrait
-                img(src="img/portraits/0.webp" id=member.id + "-img" class="selected-portrait")
-                br
-                button(type="button" value=member.id + "-dec" onclick="decimg(\"" + member.id + "-img\")" class="dec-button") <
-                button(type="button" value=member.id + "-inc" onclick="incimg(\"" + member.id + "-img\")" class="inc-button") >
+                img(src="img/portraits/0.webp" id=member.id + "-img" class="selected-portrait" onclick="updatePortrait(this)")
             td
                 input.solved(type="checkbox" id="solved" name=member.name value="solved")
                 span=member.name

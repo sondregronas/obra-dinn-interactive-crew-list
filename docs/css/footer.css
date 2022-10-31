@@ -1,0 +1,19 @@
+footer{
+    background-color: var(--mc);
+    padding: 20px;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+footer *{
+    color: var(--sc);
+}
+
+footer .note{
+    margin-top: 5px;
+    font-style: normal;
+    font-size: .6em;
+}
+
+footer .note a{
+    font-size: 1em;
+}
