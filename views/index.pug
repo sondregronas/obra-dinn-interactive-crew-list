@@ -5,7 +5,7 @@ html(lang="en")
     link(rel="stylesheet", href="style.css")
     link(rel="icon", type="image/png", href="favicon.png")
     script(src="portraits.js" defer)
-    script(src="save.js" defer)
+    script(src="modals.js" defer)
   body
       main
         header
@@ -23,10 +23,10 @@ html(lang="en")
                 li Savestate support
 
         section.menu
-            a(href="img/sketch.png" target="_blank") <button>Crew Sketch</button>
-            button(type="button" onclick="save()") Save
-            button(type="button" onclick="load()") Load
-            button(type="button" onclick="reset()") Reset
+            button(type="button" id="crewBtn") Crew Sketch
+            button(type="button" id="saveBtn") Save
+            button(type="button" id="loadBtn") Load
+            button(type="button" id="resetBtn") Reset
 
         table.crew-list
             tr
@@ -65,3 +65,22 @@ html(lang="en")
                 | This project is in no way affiliated with Lucas Pope or his game Obra Dinn.
                 br
                 | All data and images are property of Lucas Pope and his team.
+
+
+        modal#crew-modal.modal
+            .modal-content.crew-modal-content
+                span.crewClose.close &times;
+                img(src="img/sketch.png")
+        modal#save-modal.modal
+            .modal-content
+                span.saveClose.close &times;
+                p Sorry, not implemented (yet).
+        modal#load-modal.modal
+            .modal-content
+                span.loadClose.close &times;
+                p Sorry, not implemented (yet).
+        modal#reset-modal.modal
+            .modal-content
+                p Are you sure?
+                button(onclick="window.location.reload();") Yes
+                button.resetClose No

@@ -5,6 +5,11 @@
     --sc: #e4ffff;
 }
 
+html:has(.modal[style='display: block;']){
+    overflow: hidden;
+    padding-right: 16px;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -138,4 +143,47 @@ button, input {
     cursor: pointer;
     color: var(--sc);
     background-color: var(--mc);
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+    background-color: var(--sc);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid var(--mc);
+    width: 80%;
+}
+
+.modal-content button{
+    margin-top: 5px;
+    margin-inline: 10px;
+    min-width: 10ch;
+}
+
+.crew-modal-content {
+    margin: 5% auto;
+}
+
+.close {
+    color: var(--mc);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: var(--mc);
+    text-decoration: none;
+    cursor: pointer;
 }
