@@ -8,79 +8,8 @@ html(lang="en")
     script(src="modals.js" defer)
   body
       main
-        header
-            h1 Interactive Obra Dinn Crew List
-            p
-                | Help figure out the fates of the crew members onboard the Obra Dinn!
-                br
-                br
-                | A legal copy of Obra Dinn is required to play the game, this website is just a tool to bring collaborative investigation to the game.
-            br
-            p.todo
-                | Missing Features:
-                li Select portrait from crew sketch
-                li Interactive fate selector
-                li Savestate support
-
-        section.menu
-            button(type="button" id="crewBtn") Crew Sketch
-            button(type="button" id="saveBtn") Save
-            button(type="button" id="loadBtn") Load
-            button(type="button" id="resetBtn") Reset
-
-        table.crew-list
-            tr
-                th #
-                th Portrait
-                th Name
-                th Quality
-                th Origin
-                th Fate
-            each member in crew
-                tr
-                    td= member.id
-                    // TODO: Add portrait selector from public/img/crew
-                    td.portrait
-                        img(src="img/portraits/0.webp" id=member.id+"-img")
-                        br
-                        button(type="button" value=member.id+"-dec" onclick="decimg(\""+member.id+"-img\")" class="dec-button") <
-                        button(type="button" value=member.id+"-inc" onclick="incimg(\""+member.id+"-img\")" class="inc-button") >
-                    td
-                        input.solved(type="checkbox" id="solved" name=member.name value="solved")
-                        span=member.name
-
-                    td= member.quality
-                    td= member.origin
-                    // TODO: Replace with a selector / modal
-                    td <textarea name="cause-of-death"></textarea>
-
-        footer
-            p Made with ❤️ by <a href="https://github.com/sondregronas" target="_blank">@sondregronas</a>
-            p.note
-                | Note: This is a work in progress. The data is not complete, and the UI is not finished.
-                br
-                | If you want to help out, please check out the <a href="https://github.com/sondregronas/obra-dinn-interactive-crew-list" target="_blank">GitHub repo</a>!
-                br
-                br
-                | This project is in no way affiliated with Lucas Pope or his game Obra Dinn.
-                br
-                | All data and images are property of Lucas Pope and his team.
-
-
-        modal#crew-modal.modal
-            .modal-content.crew-modal-content
-                span.crewClose.close &times;
-                img(src="img/sketch.png")
-        modal#save-modal.modal
-            .modal-content
-                span.saveClose.close &times;
-                p Sorry, not implemented (yet).
-        modal#load-modal.modal
-            .modal-content
-                span.loadClose.close &times;
-                p Sorry, not implemented (yet).
-        modal#reset-modal.modal
-            .modal-content
-                p Are you sure?
-                button(onclick="window.location.reload();") Yes
-                button.resetClose No
+        include header
+        include menu
+        include crewlist
+        include modals
+        include footer

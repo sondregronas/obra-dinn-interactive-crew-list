@@ -1,0 +1,19 @@
+.modals
+    modal#crew-modal.modal
+        .modal-content.crew-modal-content
+            img#hoveredPortrait(src="img/portraits/0.webp")
+            span.crewClose.close &times;
+            include sketchmap
+    modal#save-modal.modal
+        .modal-content
+            span.saveClose.close &times;
+            p Sorry, not implemented (yet).
+    modal#load-modal.modal
+        .modal-content
+            span.loadClose.close &times;
+            p Sorry, not implemented (yet).
+    modal#reset-modal.modal
+        .modal-content
+            p Are you sure?
+            button(onclick="window.location.reload();") Yes
+            button.resetClose No

@@ -175,8 +175,13 @@ button, input {
     margin: 5% auto;
 }
 
-.crew-modal-content img{
-    width: 100%;
+#hoveredPortrait{
+    width: 10%;
+    height: auto;
+    position: fixed;
+    pointer-events: none;
+    border: solid var(--mc);
+    display: none;
 }
 
 .close {
@@ -189,5 +194,9 @@ button, input {
 .close:focus {
     color: var(--mc);
     text-decoration: none;
+    cursor: pointer;
+}
+
+#crew-modal a{
     cursor: pointer;
 }

@@ -17,3 +17,28 @@ function incimg(id) {
 
     img.src = 'img/portraits/' + src.toString() + '.webp'
 }
+
+
+// Sketch map portraits
+let attached = false;
+let portraitContainer = document.querySelector("#hoveredPortrait");
+const followMouse = (event) => {
+    portraitContainer.style.left = event.x + "px";
+    portraitContainer.style.top = event.y + "px";
+}
+function hidePortrait() {
+    attached = false;
+    portraitContainer.style.display = "none";
+    document.removeEventListener("pointermove", followMouse);
+}
+function hoverPortrait(id) {
+    portraitContainer.src = 'img/portraits/' + id.toString() + '.webp';
+    if (!attached) {
+        attached = true;
+        portraitContainer.style.display = "block";
+        document.addEventListener("pointermove", followMouse);
+    }
+}
+function clickPortrait(id) {
+    console.log("Not implemented yet")
+}
