@@ -1,4 +1,27 @@
 .modals
+    modal#help-modal.modal
+        .modal-content
+            span.helpClose.close &times;
+            h2 Help
+            br
+            p
+                | This is an interactive crew list for the game Obra Dinn. You can use it to keep track of the crew members you've found and their fates.
+                br
+                | This tool is meant to be used in conjunction with the game to allow for collaborative gameplay, not as a replacement for it.
+            br
+            p
+                | <b>Left click</b> on a portrait to bring up the portrait selection menu.
+                br
+                | <b>Right click</b> on a portrait to reset it to the default portrait.
+                br
+                | Click on the "Crew Sketch" button to bring up the crew sketch.
+                br
+                | Click on the "Save" button to save your progress.
+                br
+                | Click on the "Load" button to load your earlier save.
+                br
+                br
+            p Click on the "X" in the top right corner to close this window.
     modal#crew-modal.modal
         .modal-content.crew-modal-content
             img#hoveredPortrait(src="img/portraits/0.webp")
