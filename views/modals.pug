@@ -7,13 +7,16 @@
     modal#save-modal.modal
         .modal-content
             span.saveClose.close &times;
-            p Sorry, not implemented (yet).
+            p Save your progress by copying the text below, or by hitting the "Download" button.
+            br
+            textarea#save-text(disabled="true")
+            br
+            button(onclick="downloadSaveState()") Download
     modal#load-modal.modal
         .modal-content
             span.loadClose.close &times;
-            p Sorry, not implemented (yet).
-    modal#reset-modal.modal
-        .modal-content
-            p Are you sure?
-            button(onclick="window.location.reload();") Yes
-            button.resetClose No
+            p Load a save state by uploading a file, or by pasting the text below.
+            input(type="file" id="load-file")
+            textarea#load-text
+            br
+            button(onclick="loadSaveState()") Confirm

@@ -10,7 +10,7 @@ table.crew-list
         tr
             td= member.id
             td.portrait
-                img(src="img/portraits/0.webp" id=member.id + "-img")
+                img(src="img/portraits/0.webp" id=member.id + "-img" class="selected-portrait")
                 br
                 button(type="button" value=member.id + "-dec" onclick="decimg(\"" + member.id + "-img\")" class="dec-button") <
                 button(type="button" value=member.id + "-inc" onclick="incimg(\"" + member.id + "-img\")" class="inc-button") >
@@ -20,4 +20,4 @@ table.crew-list
 
             td= member.quality
             td= member.origin
-            td <textarea name="cause-of-death"></textarea>
+            td <textarea name="fate" id="fate"></textarea>
