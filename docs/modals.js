@@ -1,4 +1,4 @@
-// Modals
+// Modal elements
 const helpModal = document.getElementById("help-modal");
 const crewModal = document.getElementById("crew-modal");
 const saveModal = document.getElementById("save-modal");
@@ -28,9 +28,7 @@ window.onclick = function(event) {
 }
 
 
-////
-// Save modal
-////
+// Generate data string upon save modal opening
 function generateSaveState() {
     let state = {}
     let solved = document.querySelectorAll('[id=solved]');
@@ -51,6 +49,7 @@ function generateSaveState() {
     return json;
 }
 
+// Issue downloading save file
 function downloadSaveState() {
     let dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(generateSaveState());
     let dl = document.createElement('a');
@@ -62,9 +61,7 @@ function downloadSaveState() {
 }
 
 
-////
-// Load modal
-////
+// Load save state when user clicks on Confirm load button
 function loadSaveState() {
     let json = document.getElementById("load-text").value;
     let state = JSON.parse(json);
@@ -82,7 +79,7 @@ function loadSaveState() {
     loadModal.style.display = "none";
 }
 
-
+// Handle file input upload (JSON only)
 let loadFileInput = document.getElementById("load-file");
 loadFileInput.addEventListener("change", function(event){
     let reader = new FileReader();
