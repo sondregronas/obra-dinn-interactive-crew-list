@@ -51,11 +51,12 @@ function downloadSaveState() {
     let dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(generateSaveState());
     let dl = document.createElement('a');
     dl.setAttribute("href",     dataStr);
-    dl.setAttribute("download", 'Obra Dinn Save.json');
+    dl.setAttribute("download", 'obradinn-savestate.json');
     document.body.appendChild(dl);
     dl.click();
     dl.remove();
 }
+
 
 ////
 // Load modal
@@ -67,14 +68,15 @@ function loadSaveState() {
     let solved = document.querySelectorAll('[id=solved]');
     let portrait = document.querySelectorAll('[class=selected-portrait]');
     let fate = document.querySelectorAll('[id=fate]');
-    for (let i = 0; i < 60; i++) {
 
+    for (let i = 0; i < 60; i++) {
         solved[i].checked = state[i].solved;
         portrait[i].src = 'img/portraits/' + state[i].portrait + '.webp';
         fate[i].value = state[i].fate;
     }
-}
 
+    loadModal.style.display = "none";
+}
 
 
 let loadFileInput = document.getElementById("load-file");
@@ -84,7 +86,7 @@ loadFileInput.addEventListener("change", function(event){
         document.getElementById('load-text').value = event.target.result;
     };
     reader.onerror = function(event){
-        console.error("File could not be read! Code " + event.target.error.code);
+        alert("File could not be read! Code " + event.target.error.code);
     };
     reader.readAsText(loadFileInput.files[0]);
 }, false);

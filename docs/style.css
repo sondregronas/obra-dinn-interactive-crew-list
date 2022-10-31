@@ -243,6 +243,7 @@ button, input {
     border: solid var(--mc);
     font-family: var(--ff);
 }
+
 input[type="file"]{
     display: block;
     margin-top: 15px;
