@@ -8,6 +8,10 @@
 An online tool to bring collaborative gameplay to the game 'Return of the Obra Dinn' in educational environments.<br>
 The website is currently hosted using [GitHub Pages](https://sondregronas.github.io/obra-dinn-interactive-crew-list/).
 
+## In development
+This tool currently does not feature a convenient fate selector or a way to define fate based on the character's portrait, like how it is in the game.
+Only when you know the character's name you'll be able to properly write your notes.
+
 ## How to use
 You'll still need a copy of Obra Dinn in order to play, obviously.
 

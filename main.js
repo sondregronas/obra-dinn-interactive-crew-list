@@ -14,6 +14,39 @@ for (let i = 0; i < crew.length; i+=4) {
     crewDict.push({'id': crew[i], 'name': crew[i+1], 'quality': crew[i+2], 'origin': crew[i+3]});
 }
 
+const countries = ['Africa', 'Atlantic Island', 'Azores', 'Canary Islands', 'Cape Verde', 'East Indies', 'Europe', 'Middle East', 'United Kingdom', 'West Indies']
+const crushed = {
+    'Beast': 'terrible beast.',
+    'Cannon': 'loose cannon.',
+    'Cargo': 'falling cargo.',
+    'Rigging': 'falling rigging.',
+    'Stones': 'falling stones.',
+}
+const targets = ['Unknown', 'Enemy', 'Beast']
+targets.push({'name': 'Unknown', 'quality': 'Officer'})
+for (let i = 0; i < 18; i++) {targets.push(crewDict[i])}
+targets.push({'name': 'Unknown', 'quality': 'Passenger'})
+for (let i = 18; i < 26; i++) {targets.push(crewDict[i])}
+targets.push({'name': 'Unknown', 'quality': 'Steward'})
+for (let i = 26; i < 32; i++) {targets.push(crewDict[i])}
+targets.push({'name': 'Unknown', 'quality': 'Midshipman'})
+for (let i = 32; i < 35; i++) {targets.push(crewDict[i])}
+targets.push({'name': 'Unknown', 'quality': 'Topman'})
+for (let i = 35; i < 45; i++) {targets.push(crewDict[i])}
+targets.push({'name': 'Unknown', 'quality': 'Seaman'})
+for (let i = 45; i < 60; i++) {targets.push(crewDict[i])}
+
+
+const fates = {
+    'Unknown': {'text': 'met an unknown fate'},
+    'Alive': {'text': '', 'choices': countries, 'prefix': 'is alive in '},
+    'Axed': {'text': 'was axed', 'targets': targets},
+    'Burned': {'text': 'burned to death.'},
+    'Clawed': {'text': 'was clawed by a terrible beast.'},
+    'Clubbed': {'text': 'was clubbed', 'targets': targets},
+    'Crushed': {'text': 'was crushed', 'choices': crushed}, //
+}
+
 const port = 3000;
 const express = require('express');
 const app = express();
