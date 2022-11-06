@@ -32,6 +32,7 @@ function clickPortrait(id) {
         selectedPortrait = null;
     }
     crewModal.style.display = "none";
+    saveLocalStorage()
 }
 
 // Set selected portrait to be the one clicked and open crew modal

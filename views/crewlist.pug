@@ -10,7 +10,7 @@ table.crew-list
         tr
             td= member.id
             td.portrait
-                img(src="img/portraits/0.webp" id=member.id + "-img" class="selected-portrait" onclick="updatePortrait(this)" oncontextmenu="this.src='img/portraits/0.webp'; return false;")
+                img(src="img/portraits/0.webp" id=member.id + "-img" class="selected-portrait" onclick="updatePortrait(this)" oncontextmenu="updatePortrait(this); clickPortrait(0); return false;")
             td
                 input.solved(type="checkbox" id="solved" name=member.name value="solved")
                 span=member.name

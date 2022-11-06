@@ -40,8 +40,22 @@
     margin-right: .5ch;
 }
 
-.crew-list tr:has(.solved:checked){
+.crew-list tr:has(.solved:checked),
+.crew-list tr:has(.solved:checked) textarea{
     text-decoration: line-through;
+
+}
+
+.crew-list tr:has(.solved:checked) textarea{
+    pointer-events: none;
+}
+
+.crew-list tr img{
+    opacity: .85;
+}
+
+.crew-list tr:has(.solved:checked) img{
+    opacity: 1;
 }
 
 .crew-list textarea{

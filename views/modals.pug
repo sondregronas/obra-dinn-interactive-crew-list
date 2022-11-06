@@ -30,7 +30,10 @@
     modal#save-modal.modal
         .modal-content
             span.saveClose.close &times;
-            p Save your progress by copying the text below, or by hitting the "Download" button.
+            p
+              | Your progress is automatically stored in your browser's local storage.
+              br
+              | To save your progress to a file, click the "Download" button, or copy the text below.
             br
             textarea#save-text(disabled="true")
             br
@@ -38,8 +41,8 @@
     modal#load-modal.modal
         .modal-content
             span.loadClose.close &times;
-            p Load a save state by uploading a file, or by pasting the text below.
+            p Load a save state by uploading a file, or by pasting the text below, followed by clicking the "Load" button.
             input(type="file" id="load-file")
             textarea#load-text
             br
-            button(onclick="loadSaveState()") Confirm
+            button(onclick="loadSaveState()") Load
