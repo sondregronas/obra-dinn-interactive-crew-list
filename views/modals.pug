@@ -46,3 +46,10 @@
             textarea#load-text
             br
             button(onclick="loadSaveState()") Load
+    modal#reset-modal.modal
+        .modal-content
+            span.resetClose.close &times;
+            p Are you sure you want to reset your progress?
+            br
+            button(onclick="resetSaveState()") Yes
+            button(onclick="resetModal.style.display = \"none\";") No
