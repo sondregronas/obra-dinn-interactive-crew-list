@@ -55,7 +55,8 @@ app.set('view engine', 'pug');
 app.use(express.static('docs'));
 
 app.get('/', (req, res) => {
-    res.render('index', {crew: crewDict});
+    let abs_url = req.protocol + '://' + req.get('host') + req.originalUrl;
+    res.render('index', {crew: crewDict, href: abs_url});
 });
 
 app.listen(port, () => {
